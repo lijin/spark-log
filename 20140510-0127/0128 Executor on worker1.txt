@@ -1,0 +1,1224 @@
+Spark Executor Command: "/usr/lib/jvm/java-7-openjdk-amd64/bin/java" "-cp" ":/opt/spark-0.9.1/conf:/opt/spark-0.9.1/assembly/target/scala-2.10/spark-assembly_2.10-0.9.1-hadoop1.0.4.jar" "-Dspark.ui.port=4040" "-Xms512M" "-Xmx512M" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "akka.tcp://spark@tester1:59599/user/CoarseGrainedScheduler" "1" "worker1" "2" "akka.tcp://sparkWorker@worker1:56800/user/Worker" "app-20140510012828-0000"
+========================================
+
+14/05/10 01:28:32 INFO Slf4jLogger: Slf4jLogger started
+14/05/10 01:28:32 INFO Remoting: Starting remoting
+14/05/10 01:28:32 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkExecutor@worker1:44169]
+14/05/10 01:28:32 INFO Remoting: Remoting now listens on addresses: [akka.tcp://sparkExecutor@worker1:44169]
+14/05/10 01:28:32 INFO CoarseGrainedExecutorBackend: Connecting to driver: akka.tcp://spark@tester1:59599/user/CoarseGrainedScheduler
+14/05/10 01:28:32 INFO WorkerWatcher: Connecting to worker akka.tcp://sparkWorker@worker1:56800/user/Worker
+14/05/10 01:28:33 INFO WorkerWatcher: Successfully connected to akka.tcp://sparkWorker@worker1:56800/user/Worker
+14/05/10 01:28:33 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+14/05/10 01:28:33 INFO Slf4jLogger: Slf4jLogger started
+14/05/10 01:28:33 INFO Remoting: Starting remoting
+14/05/10 01:28:33 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://spark@worker1:41354]
+14/05/10 01:28:33 INFO Remoting: Remoting now listens on addresses: [akka.tcp://spark@worker1:41354]
+14/05/10 01:28:33 INFO SparkEnv: Connecting to BlockManagerMaster: akka.tcp://spark@tester1:59599/user/BlockManagerMaster
+14/05/10 01:28:33 INFO DiskBlockManager: Created local directory at /tmp/spark-local-20140510012833-aac3
+14/05/10 01:28:34 INFO MemoryStore: MemoryStore started with capacity 294.4 MB.
+14/05/10 01:28:34 INFO ConnectionManager: Bound socket to port 35229 with id = ConnectionManagerId(worker1,35229)
+14/05/10 01:28:34 INFO BlockManagerMaster: Trying to register BlockManager
+14/05/10 01:28:34 INFO BlockManagerMaster: Registered BlockManager
+14/05/10 01:28:34 INFO SparkEnv: Connecting to MapOutputTracker: akka.tcp://spark@tester1:59599/user/MapOutputTracker
+14/05/10 01:28:34 INFO HttpFileServer: HTTP File server directory is /tmp/spark-092842bf-f11f-4ee3-8eaa-eca143a15a9f
+14/05/10 01:28:34 INFO HttpServer: Starting HTTP Server
+14/05/10 01:28:37 INFO CoarseGrainedExecutorBackend: Got assigned task 6
+14/05/10 01:28:37 INFO CoarseGrainedExecutorBackend: Got assigned task 8
+14/05/10 01:28:38 INFO Executor: Running task ID 6
+14/05/10 01:28:38 INFO Executor: Running task ID 8
+14/05/10 01:28:38 INFO Executor: Fetching http://172.17.0.6:40715/jars/spark-examples_2.10-assembly-0.9.1.jar with timestamp 1399685307983
+14/05/10 01:28:38 INFO Utils: Fetching http://172.17.0.6:40715/jars/spark-examples_2.10-assembly-0.9.1.jar to /tmp/fetchFileTemp5295357763050785745.tmp
+14/05/10 01:28:41 INFO Executor: Adding file:/opt/spark-0.9.1-bin-hadoop1/work/app-20140510012828-0000/1/./spark-examples_2.10-assembly-0.9.1.jar to class loader
+14/05/10 01:28:42 INFO MapOutputTracker: Updating epoch to 2 and clearing cache
+14/05/10 01:28:42 INFO MapOutputTracker: Don't have map outputs for shuffle 0, fetching them
+14/05/10 01:28:42 INFO MapOutputTracker: Don't have map outputs for shuffle 0, fetching them
+14/05/10 01:28:42 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:42 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  297 ms
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  299 ms
+14/05/10 01:28:42 INFO SendingConnection: Initiating connection to [worker2/172.17.0.5:59127]
+14/05/10 01:28:42 INFO MapOutputTracker: Don't have map outputs for shuffle 1, fetching them
+14/05/10 01:28:42 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:42 INFO SendingConnection: Connected to [worker2/172.17.0.5:59127], 1 messages pending
+14/05/10 01:28:42 INFO MapOutputTracker: Don't have map outputs for shuffle 1, fetching them
+14/05/10 01:28:42 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  1 ms
+14/05/10 01:28:42 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  1 ms
+14/05/10 01:28:42 INFO ConnectionManager: Accepted connection from [worker2/172.17.0.5]
+14/05/10 01:28:43 INFO Executor: Serialized size of result for 8 is 952
+14/05/10 01:28:43 INFO Executor: Serialized size of result for 6 is 952
+14/05/10 01:28:43 INFO Executor: Sending result for 8 directly to driver
+14/05/10 01:28:43 INFO Executor: Sending result for 6 directly to driver
+14/05/10 01:28:43 INFO Executor: Finished task ID 8
+14/05/10 01:28:43 INFO Executor: Finished task ID 6
+14/05/10 01:28:43 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+14/05/10 01:28:43 INFO Executor: Running task ID 10
+14/05/10 01:28:43 INFO CoarseGrainedExecutorBackend: Got assigned task 12
+14/05/10 01:28:43 INFO Executor: Running task ID 12
+14/05/10 01:28:43 INFO MapOutputTracker: Updating epoch to 3 and clearing cache
+14/05/10 01:28:43 INFO CacheManager: Partition rdd_11_0 not found, computing it
+14/05/10 01:28:43 INFO MapOutputTracker: Don't have map outputs for shuffle 2, fetching them
+14/05/10 01:28:43 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:43 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:43 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:43 INFO CacheManager: Partition rdd_11_2 not found, computing it
+14/05/10 01:28:43 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:43 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 4 non-zero-bytes blocks out of 4 blocks
+14/05/10 01:28:43 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  8 ms
+14/05/10 01:28:43 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 4 non-zero-bytes blocks out of 4 blocks
+14/05/10 01:28:43 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  14 ms
+14/05/10 01:28:43 INFO MemoryStore: ensureFreeSpace(5905) called with curMem=0, maxMem=308713881
+14/05/10 01:28:43 INFO MemoryStore: Block rdd_11_2 stored as values to memory (estimated size 5.8 KB, free 294.4 MB)
+14/05/10 01:28:43 INFO MemoryStore: ensureFreeSpace(5495) called with curMem=5905, maxMem=308713881
+14/05/10 01:28:43 INFO MemoryStore: Block rdd_11_0 stored as values to memory (estimated size 5.4 KB, free 294.4 MB)
+14/05/10 01:28:43 INFO BlockManagerMaster: Updated info of block rdd_11_2
+14/05/10 01:28:43 INFO BlockManagerMaster: Updated info of block rdd_11_0
+14/05/10 01:28:43 INFO Executor: Serialized size of result for 10 is 853
+14/05/10 01:28:43 INFO Executor: Sending result for 10 directly to driver
+14/05/10 01:28:43 INFO Executor: Finished task ID 10
+14/05/10 01:28:43 INFO Executor: Serialized size of result for 12 is 853
+14/05/10 01:28:43 INFO Executor: Sending result for 12 directly to driver
+14/05/10 01:28:43 INFO Executor: Finished task ID 12
+14/05/10 01:28:44 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+14/05/10 01:28:44 INFO CoarseGrainedExecutorBackend: Got assigned task 16
+14/05/10 01:28:44 INFO Executor: Running task ID 16
+14/05/10 01:28:44 INFO Executor: Running task ID 14
+14/05/10 01:28:44 INFO BlockManager: Found block rdd_11_0 locally
+14/05/10 01:28:44 INFO BlockManager: Found block rdd_11_2 locally
+14/05/10 01:28:44 INFO Executor: Serialized size of result for 14 is 737
+14/05/10 01:28:44 INFO Executor: Sending result for 14 directly to driver
+14/05/10 01:28:44 INFO Executor: Finished task ID 14
+14/05/10 01:28:44 INFO Executor: Serialized size of result for 16 is 737
+14/05/10 01:28:44 INFO Executor: Sending result for 16 directly to driver
+14/05/10 01:28:44 INFO Executor: Finished task ID 16
+14/05/10 01:28:44 INFO CoarseGrainedExecutorBackend: Got assigned task 20
+14/05/10 01:28:44 INFO Executor: Running task ID 20
+14/05/10 01:28:44 INFO CoarseGrainedExecutorBackend: Got assigned task 22
+14/05/10 01:28:44 INFO Executor: Running task ID 22
+14/05/10 01:28:44 INFO MapOutputTracker: Updating epoch to 5 and clearing cache
+14/05/10 01:28:44 INFO BlockManager: Found block rdd_11_2 locally
+14/05/10 01:28:44 INFO BlockManager: Found block rdd_11_0 locally
+14/05/10 01:28:44 INFO Executor: Serialized size of result for 22 is 741
+14/05/10 01:28:44 INFO Executor: Sending result for 22 directly to driver
+14/05/10 01:28:44 INFO Executor: Finished task ID 22
+14/05/10 01:28:44 INFO CoarseGrainedExecutorBackend: Got assigned task 24
+14/05/10 01:28:44 INFO Executor: Running task ID 24
+14/05/10 01:28:44 INFO Executor: Serialized size of result for 20 is 741
+14/05/10 01:28:44 INFO Executor: Sending result for 20 directly to driver
+14/05/10 01:28:44 INFO Executor: Finished task ID 20
+14/05/10 01:28:44 INFO MapOutputTracker: Don't have map outputs for shuffle 3, fetching them
+14/05/10 01:28:44 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:44 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:44 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:44 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 4 non-zero-bytes blocks out of 4 blocks
+14/05/10 01:28:44 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  2 ms
+14/05/10 01:28:44 INFO MapOutputTracker: Don't have map outputs for shuffle 4, fetching them
+14/05/10 01:28:44 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:44 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:44 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:44 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:44 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  1 ms
+14/05/10 01:28:44 INFO CoarseGrainedExecutorBackend: Got assigned task 26
+14/05/10 01:28:44 INFO Executor: Running task ID 26
+14/05/10 01:28:45 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:45 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 4 non-zero-bytes blocks out of 4 blocks
+14/05/10 01:28:45 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  8 ms
+14/05/10 01:28:45 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:45 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:45 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  3 ms
+14/05/10 01:28:45 INFO Executor: Serialized size of result for 24 is 956
+14/05/10 01:28:45 INFO Executor: Sending result for 24 directly to driver
+14/05/10 01:28:45 INFO Executor: Finished task ID 24
+14/05/10 01:28:45 INFO Executor: Serialized size of result for 26 is 956
+14/05/10 01:28:45 INFO Executor: Sending result for 26 directly to driver
+14/05/10 01:28:45 INFO Executor: Finished task ID 26
+14/05/10 01:28:46 INFO CoarseGrainedExecutorBackend: Got assigned task 28
+14/05/10 01:28:46 INFO Executor: Running task ID 28
+14/05/10 01:28:46 INFO CoarseGrainedExecutorBackend: Got assigned task 30
+14/05/10 01:28:46 INFO Executor: Running task ID 30
+14/05/10 01:28:46 INFO MapOutputTracker: Updating epoch to 6 and clearing cache
+14/05/10 01:28:46 INFO CacheManager: Partition rdd_21_0 not found, computing it
+14/05/10 01:28:46 INFO MapOutputTracker: Don't have map outputs for shuffle 5, fetching them
+14/05/10 01:28:46 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:46 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:46 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:46 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 5 non-zero-bytes blocks out of 8 blocks
+14/05/10 01:28:46 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  27 ms
+14/05/10 01:28:46 INFO CacheManager: Partition rdd_21_2 not found, computing it
+14/05/10 01:28:46 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:46 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 5 non-zero-bytes blocks out of 8 blocks
+14/05/10 01:28:46 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  22 ms
+14/05/10 01:28:46 INFO MemoryStore: ensureFreeSpace(6314) called with curMem=11400, maxMem=308713881
+14/05/10 01:28:46 INFO MemoryStore: Block rdd_21_0 stored as values to memory (estimated size 6.2 KB, free 294.4 MB)
+14/05/10 01:28:46 INFO BlockManagerMaster: Updated info of block rdd_21_0
+14/05/10 01:28:46 INFO Executor: Serialized size of result for 28 is 853
+14/05/10 01:28:46 INFO Executor: Sending result for 28 directly to driver
+14/05/10 01:28:46 INFO Executor: Finished task ID 28
+14/05/10 01:28:46 INFO CoarseGrainedExecutorBackend: Got assigned task 34
+14/05/10 01:28:46 INFO Executor: Running task ID 34
+14/05/10 01:28:46 INFO MemoryStore: ensureFreeSpace(7052) called with curMem=17714, maxMem=308713881
+14/05/10 01:28:46 INFO CacheManager: Partition rdd_21_6 not found, computing it
+14/05/10 01:28:46 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:46 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 5 non-zero-bytes blocks out of 8 blocks
+14/05/10 01:28:46 INFO MemoryStore: Block rdd_21_2 stored as values to memory (estimated size 6.9 KB, free 294.4 MB)
+14/05/10 01:28:46 INFO BlockManagerMaster: Updated info of block rdd_21_2
+14/05/10 01:28:46 INFO Executor: Serialized size of result for 30 is 853
+14/05/10 01:28:46 INFO Executor: Sending result for 30 directly to driver
+14/05/10 01:28:46 INFO Executor: Finished task ID 30
+14/05/10 01:28:46 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  52 ms
+14/05/10 01:28:47 INFO MemoryStore: ensureFreeSpace(5987) called with curMem=24766, maxMem=308713881
+14/05/10 01:28:47 INFO MemoryStore: Block rdd_21_6 stored as values to memory (estimated size 5.8 KB, free 294.4 MB)
+14/05/10 01:28:47 INFO BlockManagerMaster: Updated info of block rdd_21_6
+14/05/10 01:28:47 INFO Executor: Serialized size of result for 34 is 853
+14/05/10 01:28:47 INFO Executor: Sending result for 34 directly to driver
+14/05/10 01:28:47 INFO Executor: Finished task ID 34
+14/05/10 01:28:47 INFO CoarseGrainedExecutorBackend: Got assigned task 36
+14/05/10 01:28:47 INFO Executor: Running task ID 36
+14/05/10 01:28:47 INFO CoarseGrainedExecutorBackend: Got assigned task 38
+14/05/10 01:28:47 INFO Executor: Running task ID 38
+14/05/10 01:28:47 INFO BlockManager: Found block rdd_21_0 locally
+14/05/10 01:28:47 INFO BlockManager: Found block rdd_21_2 locally
+14/05/10 01:28:48 INFO Executor: Serialized size of result for 36 is 741
+14/05/10 01:28:48 INFO Executor: Sending result for 36 directly to driver
+14/05/10 01:28:48 INFO Executor: Finished task ID 36
+14/05/10 01:28:48 INFO Executor: Serialized size of result for 38 is 741
+14/05/10 01:28:48 INFO CoarseGrainedExecutorBackend: Got assigned task 44
+14/05/10 01:28:48 INFO Executor: Running task ID 44
+14/05/10 01:28:48 INFO Executor: Sending result for 38 directly to driver
+14/05/10 01:28:48 INFO Executor: Finished task ID 38
+14/05/10 01:28:48 INFO BlockManager: Found block rdd_21_6 locally
+14/05/10 01:28:49 INFO Executor: Serialized size of result for 44 is 741
+14/05/10 01:28:49 INFO Executor: Sending result for 44 directly to driver
+14/05/10 01:28:49 INFO Executor: Finished task ID 44
+14/05/10 01:28:49 INFO CoarseGrainedExecutorBackend: Got assigned task 46
+14/05/10 01:28:49 INFO Executor: Running task ID 46
+14/05/10 01:28:49 INFO MapOutputTracker: Updating epoch to 8 and clearing cache
+14/05/10 01:28:49 INFO BlockManager: Found block rdd_21_0 locally
+14/05/10 01:28:49 INFO CoarseGrainedExecutorBackend: Got assigned task 48
+14/05/10 01:28:49 INFO Executor: Running task ID 48
+14/05/10 01:28:49 INFO Executor: Serialized size of result for 46 is 749
+14/05/10 01:28:49 INFO Executor: Sending result for 46 directly to driver
+14/05/10 01:28:49 INFO Executor: Finished task ID 46
+14/05/10 01:28:49 INFO BlockManager: Found block rdd_21_2 locally
+14/05/10 01:28:49 INFO CoarseGrainedExecutorBackend: Got assigned task 50
+14/05/10 01:28:49 INFO Executor: Running task ID 50
+14/05/10 01:28:49 INFO BlockManager: Found block rdd_21_6 locally
+14/05/10 01:28:49 INFO Executor: Serialized size of result for 48 is 749
+14/05/10 01:28:49 INFO Executor: Sending result for 48 directly to driver
+14/05/10 01:28:49 INFO Executor: Finished task ID 48
+14/05/10 01:28:49 INFO Executor: Serialized size of result for 50 is 749
+14/05/10 01:28:49 INFO Executor: Sending result for 50 directly to driver
+14/05/10 01:28:49 INFO Executor: Finished task ID 50
+14/05/10 01:28:50 INFO CoarseGrainedExecutorBackend: Got assigned task 54
+14/05/10 01:28:50 INFO Executor: Running task ID 54
+14/05/10 01:28:50 INFO MapOutputTracker: Don't have map outputs for shuffle 6, fetching them
+14/05/10 01:28:50 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:50 INFO CoarseGrainedExecutorBackend: Got assigned task 55
+14/05/10 01:28:50 INFO Executor: Running task ID 55
+14/05/10 01:28:50 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 8 non-zero-bytes blocks out of 8 blocks
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  16 ms
+14/05/10 01:28:50 INFO MapOutputTracker: Don't have map outputs for shuffle 7, fetching them
+14/05/10 01:28:50 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:50 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  13 ms
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 8 non-zero-bytes blocks out of 8 blocks
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  42 ms
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  17 ms
+14/05/10 01:28:50 INFO Executor: Serialized size of result for 55 is 964
+14/05/10 01:28:50 INFO Executor: Sending result for 55 directly to driver
+14/05/10 01:28:50 INFO Executor: Finished task ID 55
+14/05/10 01:28:50 INFO CoarseGrainedExecutorBackend: Got assigned task 58
+14/05/10 01:28:50 INFO Executor: Running task ID 58
+14/05/10 01:28:50 INFO Executor: Serialized size of result for 54 is 964
+14/05/10 01:28:50 INFO Executor: Sending result for 54 directly to driver
+14/05/10 01:28:50 INFO Executor: Finished task ID 54
+14/05/10 01:28:50 INFO CoarseGrainedExecutorBackend: Got assigned task 59
+14/05/10 01:28:50 INFO Executor: Running task ID 59
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 8 non-zero-bytes blocks out of 8 blocks
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 8 non-zero-bytes blocks out of 8 blocks
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  13 ms
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  22 ms
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  19 ms
+14/05/10 01:28:50 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  22 ms
+14/05/10 01:28:51 INFO Executor: Serialized size of result for 58 is 964
+14/05/10 01:28:51 INFO Executor: Sending result for 58 directly to driver
+14/05/10 01:28:51 INFO Executor: Finished task ID 58
+14/05/10 01:28:51 INFO Executor: Serialized size of result for 59 is 964
+14/05/10 01:28:51 INFO Executor: Sending result for 59 directly to driver
+14/05/10 01:28:51 INFO Executor: Finished task ID 59
+14/05/10 01:28:51 INFO CoarseGrainedExecutorBackend: Got assigned task 62
+14/05/10 01:28:51 INFO Executor: Running task ID 62
+14/05/10 01:28:51 INFO CoarseGrainedExecutorBackend: Got assigned task 64
+14/05/10 01:28:51 INFO Executor: Running task ID 64
+14/05/10 01:28:51 INFO MapOutputTracker: Updating epoch to 9 and clearing cache
+14/05/10 01:28:51 INFO CacheManager: Partition rdd_31_2 not found, computing it
+14/05/10 01:28:51 INFO MapOutputTracker: Don't have map outputs for shuffle 8, fetching them
+14/05/10 01:28:51 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:51 INFO CacheManager: Partition rdd_31_0 not found, computing it
+14/05/10 01:28:51 INFO MapOutputTracker: Don't have map outputs for shuffle 8, fetching them
+14/05/10 01:28:51 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 9 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  7 ms
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 9 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  10 ms
+14/05/10 01:28:51 INFO MemoryStore: ensureFreeSpace(5823) called with curMem=30753, maxMem=308713881
+14/05/10 01:28:51 INFO MemoryStore: Block rdd_31_0 stored as values to memory (estimated size 5.7 KB, free 294.4 MB)
+14/05/10 01:28:51 INFO MemoryStore: ensureFreeSpace(6232) called with curMem=36576, maxMem=308713881
+14/05/10 01:28:51 INFO MemoryStore: Block rdd_31_2 stored as values to memory (estimated size 6.1 KB, free 294.4 MB)
+14/05/10 01:28:51 INFO BlockManagerMaster: Updated info of block rdd_31_0
+14/05/10 01:28:51 INFO Executor: Serialized size of result for 62 is 853
+14/05/10 01:28:51 INFO Executor: Sending result for 62 directly to driver
+14/05/10 01:28:51 INFO Executor: Finished task ID 62
+14/05/10 01:28:51 INFO BlockManagerMaster: Updated info of block rdd_31_2
+14/05/10 01:28:51 INFO Executor: Serialized size of result for 64 is 853
+14/05/10 01:28:51 INFO Executor: Sending result for 64 directly to driver
+14/05/10 01:28:51 INFO Executor: Finished task ID 64
+14/05/10 01:28:51 INFO CoarseGrainedExecutorBackend: Got assigned task 67
+14/05/10 01:28:51 INFO Executor: Running task ID 67
+14/05/10 01:28:51 INFO CoarseGrainedExecutorBackend: Got assigned task 68
+14/05/10 01:28:51 INFO Executor: Running task ID 68
+14/05/10 01:28:51 INFO CacheManager: Partition rdd_31_5 not found, computing it
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 9 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:51 INFO CacheManager: Partition rdd_31_6 not found, computing it
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 9 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  12 ms
+14/05/10 01:28:51 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  38 ms
+14/05/10 01:28:51 INFO MemoryStore: ensureFreeSpace(6724) called with curMem=42808, maxMem=308713881
+14/05/10 01:28:51 INFO MemoryStore: Block rdd_31_5 stored as values to memory (estimated size 6.6 KB, free 294.4 MB)
+14/05/10 01:28:51 INFO MemoryStore: ensureFreeSpace(6232) called with curMem=49532, maxMem=308713881
+14/05/10 01:28:51 INFO MemoryStore: Block rdd_31_6 stored as values to memory (estimated size 6.1 KB, free 294.4 MB)
+14/05/10 01:28:51 INFO BlockManagerMaster: Updated info of block rdd_31_6
+14/05/10 01:28:51 INFO BlockManagerMaster: Updated info of block rdd_31_5
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 67 is 853
+14/05/10 01:28:52 INFO Executor: Sending result for 67 directly to driver
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 68 is 853
+14/05/10 01:28:52 INFO Executor: Sending result for 68 directly to driver
+14/05/10 01:28:52 INFO Executor: Finished task ID 68
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 72
+14/05/10 01:28:52 INFO Executor: Finished task ID 67
+14/05/10 01:28:52 INFO Executor: Running task ID 72
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 73
+14/05/10 01:28:52 INFO Executor: Running task ID 73
+14/05/10 01:28:52 INFO CacheManager: Partition rdd_31_10 not found, computing it
+14/05/10 01:28:52 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:52 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 9 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:52 INFO CacheManager: Partition rdd_31_11 not found, computing it
+14/05/10 01:28:52 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:52 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 9 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:52 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  36 ms
+14/05/10 01:28:52 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  47 ms
+14/05/10 01:28:52 INFO MemoryStore: ensureFreeSpace(6151) called with curMem=55764, maxMem=308713881
+14/05/10 01:28:52 INFO MemoryStore: Block rdd_31_10 stored as values to memory (estimated size 6.0 KB, free 294.4 MB)
+14/05/10 01:28:52 INFO MemoryStore: ensureFreeSpace(6151) called with curMem=61915, maxMem=308713881
+14/05/10 01:28:52 INFO MemoryStore: Block rdd_31_11 stored as values to memory (estimated size 6.0 KB, free 294.3 MB)
+14/05/10 01:28:52 INFO BlockManagerMaster: Updated info of block rdd_31_10
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 72 is 853
+14/05/10 01:28:52 INFO Executor: Sending result for 72 directly to driver
+14/05/10 01:28:52 INFO Executor: Finished task ID 72
+14/05/10 01:28:52 INFO BlockManagerMaster: Updated info of block rdd_31_11
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 73 is 853
+14/05/10 01:28:52 INFO Executor: Sending result for 73 directly to driver
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 77
+14/05/10 01:28:52 INFO Executor: Running task ID 77
+14/05/10 01:28:52 INFO Executor: Finished task ID 73
+14/05/10 01:28:52 INFO CacheManager: Partition rdd_31_15 not found, computing it
+14/05/10 01:28:52 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:52 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 9 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:52 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  19 ms
+14/05/10 01:28:52 INFO MemoryStore: ensureFreeSpace(6806) called with curMem=68066, maxMem=308713881
+14/05/10 01:28:52 INFO MemoryStore: Block rdd_31_15 stored as values to memory (estimated size 6.6 KB, free 294.3 MB)
+14/05/10 01:28:52 INFO BlockManagerMaster: Updated info of block rdd_31_15
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 77 is 853
+14/05/10 01:28:52 INFO Executor: Sending result for 77 directly to driver
+14/05/10 01:28:52 INFO Executor: Finished task ID 77
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 78
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 80
+14/05/10 01:28:52 INFO Executor: Running task ID 80
+14/05/10 01:28:52 INFO Executor: Running task ID 78
+14/05/10 01:28:52 INFO BlockManager: Found block rdd_31_2 locally
+14/05/10 01:28:52 INFO BlockManager: Found block rdd_31_0 locally
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 80 is 749
+14/05/10 01:28:52 INFO Executor: Sending result for 80 directly to driver
+14/05/10 01:28:52 INFO Executor: Finished task ID 80
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 82
+14/05/10 01:28:52 INFO Executor: Running task ID 82
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 78 is 749
+14/05/10 01:28:52 INFO Executor: Sending result for 78 directly to driver
+14/05/10 01:28:52 INFO Executor: Finished task ID 78
+14/05/10 01:28:52 INFO BlockManager: Found block rdd_31_5 locally
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 84
+14/05/10 01:28:52 INFO Executor: Running task ID 84
+14/05/10 01:28:52 INFO BlockManager: Found block rdd_31_6 locally
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 82 is 749
+14/05/10 01:28:52 INFO Executor: Sending result for 82 directly to driver
+14/05/10 01:28:52 INFO Executor: Finished task ID 82
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 87
+14/05/10 01:28:52 INFO Executor: Running task ID 87
+14/05/10 01:28:52 INFO BlockManager: Found block rdd_31_10 locally
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 87 is 749
+14/05/10 01:28:52 INFO Executor: Sending result for 87 directly to driver
+14/05/10 01:28:52 INFO Executor: Finished task ID 87
+14/05/10 01:28:52 INFO Executor: Serialized size of result for 84 is 749
+14/05/10 01:28:52 INFO Executor: Sending result for 84 directly to driver
+14/05/10 01:28:52 INFO Executor: Finished task ID 84
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 90
+14/05/10 01:28:52 INFO Executor: Running task ID 90
+14/05/10 01:28:52 INFO CoarseGrainedExecutorBackend: Got assigned task 91
+14/05/10 01:28:52 INFO Executor: Running task ID 91
+14/05/10 01:28:52 INFO BlockManager: Found block rdd_31_11 locally
+14/05/10 01:28:53 INFO BlockManager: Found block rdd_31_15 locally
+14/05/10 01:28:53 INFO Executor: Serialized size of result for 90 is 749
+14/05/10 01:28:53 INFO Executor: Sending result for 90 directly to driver
+14/05/10 01:28:53 INFO Executor: Finished task ID 90
+14/05/10 01:28:53 INFO Executor: Serialized size of result for 91 is 749
+14/05/10 01:28:53 INFO Executor: Sending result for 91 directly to driver
+14/05/10 01:28:53 INFO Executor: Finished task ID 91
+14/05/10 01:28:53 INFO CoarseGrainedExecutorBackend: Got assigned task 96
+14/05/10 01:28:53 INFO Executor: Running task ID 96
+14/05/10 01:28:53 INFO CoarseGrainedExecutorBackend: Got assigned task 98
+14/05/10 01:28:53 INFO Executor: Running task ID 98
+14/05/10 01:28:53 INFO MapOutputTracker: Updating epoch to 11 and clearing cache
+14/05/10 01:28:53 INFO BlockManager: Found block rdd_31_2 locally
+14/05/10 01:28:53 INFO BlockManager: Found block rdd_31_0 locally
+14/05/10 01:28:53 INFO Executor: Serialized size of result for 96 is 765
+14/05/10 01:28:53 INFO Executor: Sending result for 96 directly to driver
+14/05/10 01:28:53 INFO Executor: Finished task ID 96
+14/05/10 01:28:53 INFO Executor: Serialized size of result for 98 is 765
+14/05/10 01:28:53 INFO Executor: Sending result for 98 directly to driver
+14/05/10 01:28:53 INFO CoarseGrainedExecutorBackend: Got assigned task 101
+14/05/10 01:28:53 INFO Executor: Running task ID 101
+14/05/10 01:28:53 INFO CoarseGrainedExecutorBackend: Got assigned task 102
+14/05/10 01:28:53 INFO Executor: Finished task ID 98
+14/05/10 01:28:53 INFO Executor: Running task ID 102
+14/05/10 01:28:53 INFO BlockManager: Found block rdd_31_5 locally
+14/05/10 01:28:53 INFO BlockManager: Found block rdd_31_6 locally
+14/05/10 01:28:53 INFO Executor: Serialized size of result for 101 is 765
+14/05/10 01:28:53 INFO Executor: Sending result for 101 directly to driver
+14/05/10 01:28:53 INFO Executor: Finished task ID 101
+14/05/10 01:28:53 INFO CoarseGrainedExecutorBackend: Got assigned task 105
+14/05/10 01:28:53 INFO Executor: Running task ID 105
+14/05/10 01:28:53 INFO Executor: Serialized size of result for 102 is 765
+14/05/10 01:28:53 INFO Executor: Sending result for 102 directly to driver
+14/05/10 01:28:53 INFO Executor: Finished task ID 102
+14/05/10 01:28:53 INFO BlockManager: Found block rdd_31_10 locally
+14/05/10 01:28:53 INFO Executor: Serialized size of result for 105 is 765
+14/05/10 01:28:53 INFO Executor: Sending result for 105 directly to driver
+14/05/10 01:28:53 INFO Executor: Finished task ID 105
+14/05/10 01:28:53 INFO CoarseGrainedExecutorBackend: Got assigned task 108
+14/05/10 01:28:53 INFO Executor: Running task ID 108
+14/05/10 01:28:53 INFO BlockManager: Found block rdd_31_11 locally
+14/05/10 01:28:53 INFO CoarseGrainedExecutorBackend: Got assigned task 109
+14/05/10 01:28:53 INFO Executor: Running task ID 109
+14/05/10 01:28:53 INFO Executor: Serialized size of result for 108 is 765
+14/05/10 01:28:53 INFO Executor: Sending result for 108 directly to driver
+14/05/10 01:28:53 INFO Executor: Finished task ID 108
+14/05/10 01:28:54 INFO BlockManager: Found block rdd_31_15 locally
+14/05/10 01:28:54 INFO CoarseGrainedExecutorBackend: Got assigned task 112
+14/05/10 01:28:54 INFO Executor: Running task ID 112
+14/05/10 01:28:54 INFO MapOutputTracker: Don't have map outputs for shuffle 9, fetching them
+14/05/10 01:28:54 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:54 INFO Executor: Serialized size of result for 109 is 765
+14/05/10 01:28:54 INFO Executor: Sending result for 109 directly to driver
+14/05/10 01:28:54 INFO Executor: Finished task ID 109
+14/05/10 01:28:54 INFO CoarseGrainedExecutorBackend: Got assigned task 113
+14/05/10 01:28:54 INFO Executor: Running task ID 113
+14/05/10 01:28:54 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 16 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  6 ms
+14/05/10 01:28:54 INFO MapOutputTracker: Don't have map outputs for shuffle 10, fetching them
+14/05/10 01:28:54 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:54 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  3 ms
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 16 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  10 ms
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  31 ms
+14/05/10 01:28:54 INFO Executor: Serialized size of result for 112 is 980
+14/05/10 01:28:54 INFO Executor: Sending result for 112 directly to driver
+14/05/10 01:28:54 INFO Executor: Finished task ID 112
+14/05/10 01:28:54 INFO CoarseGrainedExecutorBackend: Got assigned task 118
+14/05/10 01:28:54 INFO Executor: Running task ID 118
+14/05/10 01:28:54 INFO Executor: Serialized size of result for 113 is 980
+14/05/10 01:28:54 INFO Executor: Sending result for 113 directly to driver
+14/05/10 01:28:54 INFO Executor: Finished task ID 113
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 16 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:54 INFO CoarseGrainedExecutorBackend: Got assigned task 119
+14/05/10 01:28:54 INFO Executor: Running task ID 119
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  37 ms
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  3 ms
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 16 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  5 ms
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  6 ms
+14/05/10 01:28:54 INFO Executor: Serialized size of result for 118 is 980
+14/05/10 01:28:54 INFO Executor: Sending result for 118 directly to driver
+14/05/10 01:28:54 INFO Executor: Finished task ID 118
+14/05/10 01:28:54 INFO CoarseGrainedExecutorBackend: Got assigned task 121
+14/05/10 01:28:54 INFO Executor: Running task ID 121
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 16 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  5 ms
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:54 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  13 ms
+14/05/10 01:28:55 INFO Executor: Serialized size of result for 121 is 980
+14/05/10 01:28:55 INFO Executor: Sending result for 121 directly to driver
+14/05/10 01:28:55 INFO Executor: Serialized size of result for 119 is 980
+14/05/10 01:28:55 INFO Executor: Sending result for 119 directly to driver
+14/05/10 01:28:55 INFO CoarseGrainedExecutorBackend: Got assigned task 123
+14/05/10 01:28:55 INFO Executor: Finished task ID 121
+14/05/10 01:28:55 INFO Executor: Running task ID 123
+14/05/10 01:28:55 INFO Executor: Finished task ID 119
+14/05/10 01:28:55 INFO CoarseGrainedExecutorBackend: Got assigned task 124
+14/05/10 01:28:55 INFO Executor: Running task ID 124
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 16 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  22 ms
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  1 ms
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 16 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  52 ms
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  10 ms
+14/05/10 01:28:55 INFO Executor: Serialized size of result for 123 is 980
+14/05/10 01:28:55 INFO Executor: Sending result for 123 directly to driver
+14/05/10 01:28:55 INFO Executor: Finished task ID 123
+14/05/10 01:28:55 INFO CoarseGrainedExecutorBackend: Got assigned task 127
+14/05/10 01:28:55 INFO Executor: Running task ID 127
+14/05/10 01:28:55 INFO Executor: Serialized size of result for 124 is 980
+14/05/10 01:28:55 INFO Executor: Sending result for 124 directly to driver
+14/05/10 01:28:55 INFO Executor: Finished task ID 124
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 16 non-zero-bytes blocks out of 16 blocks
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  15 ms
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  2 ms
+14/05/10 01:28:55 INFO Executor: Serialized size of result for 127 is 980
+14/05/10 01:28:55 INFO Executor: Sending result for 127 directly to driver
+14/05/10 01:28:55 INFO Executor: Finished task ID 127
+14/05/10 01:28:55 INFO CoarseGrainedExecutorBackend: Got assigned task 128
+14/05/10 01:28:55 INFO Executor: Running task ID 128
+14/05/10 01:28:55 INFO MapOutputTracker: Updating epoch to 12 and clearing cache
+14/05/10 01:28:55 INFO CoarseGrainedExecutorBackend: Got assigned task 130
+14/05/10 01:28:55 INFO Executor: Running task ID 130
+14/05/10 01:28:55 INFO CacheManager: Partition rdd_41_0 not found, computing it
+14/05/10 01:28:55 INFO MapOutputTracker: Don't have map outputs for shuffle 11, fetching them
+14/05/10 01:28:55 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:28:55 INFO CacheManager: Partition rdd_41_2 not found, computing it
+14/05/10 01:28:55 INFO MapOutputTracker: Don't have map outputs for shuffle 11, fetching them
+14/05/10 01:28:55 INFO MapOutputTracker: Got the output locations
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  13 ms
+14/05/10 01:28:55 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  9 ms
+14/05/10 01:28:55 INFO MemoryStore: ensureFreeSpace(4176) called with curMem=74872, maxMem=308713881
+14/05/10 01:28:55 INFO MemoryStore: Block rdd_41_2 stored as values to memory (estimated size 4.1 KB, free 294.3 MB)
+14/05/10 01:28:55 INFO MemoryStore: ensureFreeSpace(4208) called with curMem=79048, maxMem=308713881
+14/05/10 01:28:55 INFO MemoryStore: Block rdd_41_0 stored as values to memory (estimated size 4.1 KB, free 294.3 MB)
+14/05/10 01:28:55 INFO BlockManagerMaster: Updated info of block rdd_41_2
+14/05/10 01:28:55 INFO Executor: Serialized size of result for 130 is 853
+14/05/10 01:28:55 INFO Executor: Sending result for 130 directly to driver
+14/05/10 01:28:55 INFO Executor: Finished task ID 130
+14/05/10 01:28:55 INFO BlockManagerMaster: Updated info of block rdd_41_0
+14/05/10 01:28:55 INFO Executor: Serialized size of result for 128 is 853
+14/05/10 01:28:55 INFO Executor: Sending result for 128 directly to driver
+14/05/10 01:28:55 INFO CoarseGrainedExecutorBackend: Got assigned task 134
+14/05/10 01:28:55 INFO Executor: Running task ID 134
+14/05/10 01:28:56 INFO Executor: Finished task ID 128
+14/05/10 01:28:56 INFO CacheManager: Partition rdd_41_6 not found, computing it
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:56 INFO CoarseGrainedExecutorBackend: Got assigned task 135
+14/05/10 01:28:56 INFO Executor: Running task ID 135
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  46 ms
+14/05/10 01:28:56 INFO CacheManager: Partition rdd_41_7 not found, computing it
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  15 ms
+14/05/10 01:28:56 INFO MemoryStore: ensureFreeSpace(4528) called with curMem=83256, maxMem=308713881
+14/05/10 01:28:56 INFO MemoryStore: Block rdd_41_6 stored as values to memory (estimated size 4.4 KB, free 294.3 MB)
+14/05/10 01:28:56 INFO BlockManagerMaster: Updated info of block rdd_41_6
+14/05/10 01:28:56 INFO Executor: Serialized size of result for 134 is 853
+14/05/10 01:28:56 INFO Executor: Sending result for 134 directly to driver
+14/05/10 01:28:56 INFO Executor: Finished task ID 134
+14/05/10 01:28:56 INFO CoarseGrainedExecutorBackend: Got assigned task 138
+14/05/10 01:28:56 INFO MemoryStore: ensureFreeSpace(4208) called with curMem=87784, maxMem=308713881
+14/05/10 01:28:56 INFO MemoryStore: Block rdd_41_7 stored as values to memory (estimated size 4.1 KB, free 294.3 MB)
+14/05/10 01:28:56 INFO Executor: Running task ID 138
+14/05/10 01:28:56 INFO BlockManagerMaster: Updated info of block rdd_41_7
+14/05/10 01:28:56 INFO Executor: Serialized size of result for 135 is 853
+14/05/10 01:28:56 INFO Executor: Sending result for 135 directly to driver
+14/05/10 01:28:56 INFO Executor: Finished task ID 135
+14/05/10 01:28:56 INFO CacheManager: Partition rdd_41_10 not found, computing it
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  2 ms
+14/05/10 01:28:56 INFO CoarseGrainedExecutorBackend: Got assigned task 139
+14/05/10 01:28:56 INFO Executor: Running task ID 139
+14/05/10 01:28:56 INFO CacheManager: Partition rdd_41_11 not found, computing it
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  7 ms
+14/05/10 01:28:56 INFO MemoryStore: ensureFreeSpace(4528) called with curMem=91992, maxMem=308713881
+14/05/10 01:28:56 INFO MemoryStore: Block rdd_41_10 stored as values to memory (estimated size 4.4 KB, free 294.3 MB)
+14/05/10 01:28:56 INFO BlockManagerMaster: Updated info of block rdd_41_10
+14/05/10 01:28:56 INFO Executor: Serialized size of result for 138 is 853
+14/05/10 01:28:56 INFO Executor: Sending result for 138 directly to driver
+14/05/10 01:28:56 INFO Executor: Finished task ID 138
+14/05/10 01:28:56 INFO CoarseGrainedExecutorBackend: Got assigned task 140
+14/05/10 01:28:56 INFO Executor: Running task ID 140
+14/05/10 01:28:56 INFO CacheManager: Partition rdd_41_12 not found, computing it
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  2 ms
+14/05/10 01:28:56 INFO MemoryStore: ensureFreeSpace(4176) called with curMem=96520, maxMem=308713881
+14/05/10 01:28:56 INFO MemoryStore: Block rdd_41_11 stored as values to memory (estimated size 4.1 KB, free 294.3 MB)
+14/05/10 01:28:56 INFO BlockManagerMaster: Updated info of block rdd_41_11
+14/05/10 01:28:56 INFO Executor: Serialized size of result for 139 is 853
+14/05/10 01:28:56 INFO Executor: Sending result for 139 directly to driver
+14/05/10 01:28:56 INFO Executor: Finished task ID 139
+14/05/10 01:28:56 INFO CoarseGrainedExecutorBackend: Got assigned task 142
+14/05/10 01:28:56 INFO Executor: Running task ID 142
+14/05/10 01:28:56 INFO CacheManager: Partition rdd_41_14 not found, computing it
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  2 ms
+14/05/10 01:28:56 INFO MemoryStore: ensureFreeSpace(4016) called with curMem=100696, maxMem=308713881
+14/05/10 01:28:56 INFO MemoryStore: Block rdd_41_12 stored as values to memory (estimated size 3.9 KB, free 294.3 MB)
+14/05/10 01:28:56 INFO BlockManagerMaster: Updated info of block rdd_41_12
+14/05/10 01:28:56 INFO Executor: Serialized size of result for 140 is 853
+14/05/10 01:28:56 INFO Executor: Sending result for 140 directly to driver
+14/05/10 01:28:56 INFO Executor: Finished task ID 140
+14/05/10 01:28:56 INFO CoarseGrainedExecutorBackend: Got assigned task 144
+14/05/10 01:28:56 INFO Executor: Running task ID 144
+14/05/10 01:28:56 INFO CacheManager: Partition rdd_41_16 not found, computing it
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:56 INFO MemoryStore: ensureFreeSpace(4144) called with curMem=104712, maxMem=308713881
+14/05/10 01:28:56 INFO MemoryStore: Block rdd_41_14 stored as values to memory (estimated size 4.0 KB, free 294.3 MB)
+14/05/10 01:28:56 INFO BlockManagerMaster: Updated info of block rdd_41_14
+14/05/10 01:28:56 INFO Executor: Serialized size of result for 142 is 853
+14/05/10 01:28:56 INFO Executor: Sending result for 142 directly to driver
+14/05/10 01:28:56 INFO Executor: Finished task ID 142
+14/05/10 01:28:56 INFO CoarseGrainedExecutorBackend: Got assigned task 145
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:56 INFO Executor: Running task ID 145
+14/05/10 01:28:56 INFO CacheManager: Partition rdd_41_17 not found, computing it
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  4 ms
+14/05/10 01:28:56 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  80 ms
+14/05/10 01:28:56 INFO MemoryStore: ensureFreeSpace(4464) called with curMem=108856, maxMem=308713881
+14/05/10 01:28:56 INFO MemoryStore: Block rdd_41_16 stored as values to memory (estimated size 4.4 KB, free 294.3 MB)
+14/05/10 01:28:57 INFO BlockManagerMaster: Updated info of block rdd_41_16
+14/05/10 01:28:57 INFO Executor: Serialized size of result for 144 is 853
+14/05/10 01:28:57 INFO Executor: Sending result for 144 directly to driver
+14/05/10 01:28:57 INFO Executor: Finished task ID 144
+14/05/10 01:28:57 INFO CoarseGrainedExecutorBackend: Got assigned task 147
+14/05/10 01:28:57 INFO Executor: Running task ID 147
+14/05/10 01:28:57 INFO CacheManager: Partition rdd_41_19 not found, computing it
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 16 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:57 INFO MemoryStore: ensureFreeSpace(4336) called with curMem=113320, maxMem=308713881
+14/05/10 01:28:57 INFO MemoryStore: Block rdd_41_17 stored as values to memory (estimated size 4.2 KB, free 294.3 MB)
+14/05/10 01:28:57 INFO BlockManagerMaster: Updated info of block rdd_41_17
+14/05/10 01:28:57 INFO Executor: Serialized size of result for 145 is 853
+14/05/10 01:28:57 INFO Executor: Sending result for 145 directly to driver
+14/05/10 01:28:57 INFO Executor: Finished task ID 145
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  139 ms
+14/05/10 01:28:57 INFO CoarseGrainedExecutorBackend: Got assigned task 150
+14/05/10 01:28:57 INFO Executor: Running task ID 150
+14/05/10 01:28:57 INFO CacheManager: Partition rdd_41_22 not found, computing it
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  16 ms
+14/05/10 01:28:57 INFO MemoryStore: ensureFreeSpace(4016) called with curMem=117656, maxMem=308713881
+14/05/10 01:28:57 INFO MemoryStore: Block rdd_41_19 stored as values to memory (estimated size 3.9 KB, free 294.3 MB)
+14/05/10 01:28:57 INFO MemoryStore: ensureFreeSpace(4592) called with curMem=121672, maxMem=308713881
+14/05/10 01:28:57 INFO MemoryStore: Block rdd_41_22 stored as values to memory (estimated size 4.5 KB, free 294.3 MB)
+14/05/10 01:28:57 INFO BlockManagerMaster: Updated info of block rdd_41_19
+14/05/10 01:28:57 INFO Executor: Serialized size of result for 147 is 853
+14/05/10 01:28:57 INFO Executor: Sending result for 147 directly to driver
+14/05/10 01:28:57 INFO CoarseGrainedExecutorBackend: Got assigned task 151
+14/05/10 01:28:57 INFO BlockManagerMaster: Updated info of block rdd_41_22
+14/05/10 01:28:57 INFO Executor: Running task ID 151
+14/05/10 01:28:57 INFO Executor: Serialized size of result for 150 is 853
+14/05/10 01:28:57 INFO Executor: Sending result for 150 directly to driver
+14/05/10 01:28:57 INFO Executor: Finished task ID 150
+14/05/10 01:28:57 INFO CoarseGrainedExecutorBackend: Got assigned task 152
+14/05/10 01:28:57 INFO Executor: Finished task ID 147
+14/05/10 01:28:57 INFO Executor: Running task ID 152
+14/05/10 01:28:57 INFO CacheManager: Partition rdd_41_23 not found, computing it
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  5 ms
+14/05/10 01:28:57 INFO CacheManager: Partition rdd_41_24 not found, computing it
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  5 ms
+14/05/10 01:28:57 INFO MemoryStore: ensureFreeSpace(4528) called with curMem=126264, maxMem=308713881
+14/05/10 01:28:57 INFO MemoryStore: Block rdd_41_23 stored as values to memory (estimated size 4.4 KB, free 294.3 MB)
+14/05/10 01:28:57 INFO MemoryStore: ensureFreeSpace(4176) called with curMem=130792, maxMem=308713881
+14/05/10 01:28:57 INFO MemoryStore: Block rdd_41_24 stored as values to memory (estimated size 4.1 KB, free 294.3 MB)
+14/05/10 01:28:57 INFO BlockManagerMaster: Updated info of block rdd_41_23
+14/05/10 01:28:57 INFO Executor: Serialized size of result for 151 is 853
+14/05/10 01:28:57 INFO Executor: Sending result for 151 directly to driver
+14/05/10 01:28:57 INFO Executor: Finished task ID 151
+14/05/10 01:28:57 INFO BlockManagerMaster: Updated info of block rdd_41_24
+14/05/10 01:28:57 INFO CoarseGrainedExecutorBackend: Got assigned task 155
+14/05/10 01:28:57 INFO Executor: Running task ID 155
+14/05/10 01:28:57 INFO Executor: Serialized size of result for 152 is 853
+14/05/10 01:28:57 INFO Executor: Sending result for 152 directly to driver
+14/05/10 01:28:57 INFO Executor: Finished task ID 152
+14/05/10 01:28:57 INFO CacheManager: Partition rdd_41_27 not found, computing it
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:57 INFO CoarseGrainedExecutorBackend: Got assigned task 157
+14/05/10 01:28:57 INFO Executor: Running task ID 157
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  11 ms
+14/05/10 01:28:57 INFO CacheManager: Partition rdd_41_29 not found, computing it
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  3 ms
+14/05/10 01:28:57 INFO MemoryStore: ensureFreeSpace(4592) called with curMem=134968, maxMem=308713881
+14/05/10 01:28:57 INFO MemoryStore: Block rdd_41_27 stored as values to memory (estimated size 4.5 KB, free 294.3 MB)
+14/05/10 01:28:57 INFO BlockManagerMaster: Updated info of block rdd_41_27
+14/05/10 01:28:57 INFO Executor: Serialized size of result for 155 is 853
+14/05/10 01:28:57 INFO Executor: Sending result for 155 directly to driver
+14/05/10 01:28:57 INFO Executor: Finished task ID 155
+14/05/10 01:28:57 INFO CoarseGrainedExecutorBackend: Got assigned task 159
+14/05/10 01:28:57 INFO Executor: Running task ID 159
+14/05/10 01:28:57 INFO MemoryStore: ensureFreeSpace(5331) called with curMem=139560, maxMem=308713881
+14/05/10 01:28:57 INFO MemoryStore: Block rdd_41_29 stored as values to memory (estimated size 5.2 KB, free 294.3 MB)
+14/05/10 01:28:57 INFO BlockManagerMaster: Updated info of block rdd_41_29
+14/05/10 01:28:57 INFO Executor: Serialized size of result for 157 is 853
+14/05/10 01:28:57 INFO Executor: Sending result for 157 directly to driver
+14/05/10 01:28:57 INFO Executor: Finished task ID 157
+14/05/10 01:28:57 INFO CacheManager: Partition rdd_41_31 not found, computing it
+14/05/10 01:28:57 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:28:58 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 17 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:28:58 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  19 ms
+14/05/10 01:28:58 INFO MemoryStore: ensureFreeSpace(5331) called with curMem=144891, maxMem=308713881
+14/05/10 01:28:58 INFO MemoryStore: Block rdd_41_31 stored as values to memory (estimated size 5.2 KB, free 294.3 MB)
+14/05/10 01:28:58 INFO BlockManagerMaster: Updated info of block rdd_41_31
+14/05/10 01:28:58 INFO Executor: Serialized size of result for 159 is 853
+14/05/10 01:28:58 INFO Executor: Sending result for 159 directly to driver
+14/05/10 01:28:58 INFO Executor: Finished task ID 159
+14/05/10 01:28:58 INFO CoarseGrainedExecutorBackend: Got assigned task 160
+14/05/10 01:28:58 INFO Executor: Running task ID 160
+14/05/10 01:28:58 INFO CoarseGrainedExecutorBackend: Got assigned task 162
+14/05/10 01:28:58 INFO Executor: Running task ID 162
+14/05/10 01:28:58 INFO BlockManager: Found block rdd_41_2 locally
+14/05/10 01:28:58 INFO BlockManager: Found block rdd_41_0 locally
+14/05/10 01:28:58 INFO Executor: Serialized size of result for 160 is 765
+14/05/10 01:28:58 INFO Executor: Sending result for 160 directly to driver
+14/05/10 01:28:58 INFO Executor: Serialized size of result for 162 is 765
+14/05/10 01:28:58 INFO Executor: Sending result for 162 directly to driver
+14/05/10 01:28:58 INFO Executor: Finished task ID 162
+14/05/10 01:28:58 INFO Executor: Finished task ID 160
+14/05/10 01:28:58 INFO CoarseGrainedExecutorBackend: Got assigned task 166
+14/05/10 01:28:58 INFO Executor: Running task ID 166
+14/05/10 01:28:58 INFO BlockManager: Found block rdd_41_6 locally
+14/05/10 01:28:58 INFO CoarseGrainedExecutorBackend: Got assigned task 167
+14/05/10 01:28:58 INFO Executor: Running task ID 167
+14/05/10 01:28:58 INFO Executor: Serialized size of result for 166 is 765
+14/05/10 01:28:58 INFO Executor: Sending result for 166 directly to driver
+14/05/10 01:28:58 INFO BlockManager: Found block rdd_41_7 locally
+14/05/10 01:28:58 INFO Executor: Finished task ID 166
+14/05/10 01:28:58 INFO CoarseGrainedExecutorBackend: Got assigned task 170
+14/05/10 01:28:58 INFO Executor: Running task ID 170
+14/05/10 01:28:58 INFO BlockManager: Found block rdd_41_10 locally
+14/05/10 01:28:58 INFO Executor: Serialized size of result for 167 is 765
+14/05/10 01:28:58 INFO Executor: Sending result for 167 directly to driver
+14/05/10 01:28:58 INFO Executor: Finished task ID 167
+14/05/10 01:28:58 INFO Executor: Serialized size of result for 170 is 765
+14/05/10 01:28:58 INFO Executor: Sending result for 170 directly to driver
+14/05/10 01:28:58 INFO Executor: Finished task ID 170
+14/05/10 01:28:58 INFO CoarseGrainedExecutorBackend: Got assigned task 171
+14/05/10 01:28:58 INFO Executor: Running task ID 171
+14/05/10 01:28:58 INFO BlockManager: Found block rdd_41_11 locally
+14/05/10 01:28:58 INFO CoarseGrainedExecutorBackend: Got assigned task 173
+14/05/10 01:28:58 INFO Executor: Running task ID 173
+14/05/10 01:28:58 INFO BlockManager: Found block rdd_41_12 locally
+14/05/10 01:28:58 INFO Executor: Serialized size of result for 171 is 765
+14/05/10 01:28:58 INFO Executor: Sending result for 171 directly to driver
+14/05/10 01:28:58 INFO Executor: Finished task ID 171
+14/05/10 01:28:58 INFO CoarseGrainedExecutorBackend: Got assigned task 175
+14/05/10 01:28:58 INFO Executor: Running task ID 175
+14/05/10 01:28:58 INFO Executor: Serialized size of result for 173 is 765
+14/05/10 01:28:58 INFO Executor: Sending result for 173 directly to driver
+14/05/10 01:28:58 INFO Executor: Finished task ID 173
+14/05/10 01:28:58 INFO BlockManager: Found block rdd_41_14 locally
+14/05/10 01:28:58 INFO CoarseGrainedExecutorBackend: Got assigned task 176
+14/05/10 01:28:58 INFO Executor: Running task ID 176
+14/05/10 01:28:58 INFO BlockManager: Found block rdd_41_16 locally
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 175 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 175 directly to driver
+14/05/10 01:28:59 INFO Executor: Finished task ID 175
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 179
+14/05/10 01:28:59 INFO Executor: Running task ID 179
+14/05/10 01:28:59 INFO BlockManager: Found block rdd_41_17 locally
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 176 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 176 directly to driver
+14/05/10 01:28:59 INFO Executor: Finished task ID 176
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 182
+14/05/10 01:28:59 INFO Executor: Running task ID 182
+14/05/10 01:28:59 INFO BlockManager: Found block rdd_41_19 locally
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 179 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 179 directly to driver
+14/05/10 01:28:59 INFO Executor: Finished task ID 179
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 184
+14/05/10 01:28:59 INFO Executor: Running task ID 184
+14/05/10 01:28:59 INFO BlockManager: Found block rdd_41_22 locally
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 182 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 182 directly to driver
+14/05/10 01:28:59 INFO Executor: Finished task ID 182
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 185
+14/05/10 01:28:59 INFO Executor: Running task ID 185
+14/05/10 01:28:59 INFO BlockManager: Found block rdd_41_23 locally
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 184 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 184 directly to driver
+14/05/10 01:28:59 INFO Executor: Finished task ID 184
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 185 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 185 directly to driver
+14/05/10 01:28:59 INFO Executor: Finished task ID 185
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 190
+14/05/10 01:28:59 INFO Executor: Running task ID 190
+14/05/10 01:28:59 INFO BlockManager: Found block rdd_41_24 locally
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 191
+14/05/10 01:28:59 INFO Executor: Running task ID 191
+14/05/10 01:28:59 INFO BlockManager: Found block rdd_41_27 locally
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 190 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 190 directly to driver
+14/05/10 01:28:59 INFO Executor: Finished task ID 190
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 192
+14/05/10 01:28:59 INFO Executor: Running task ID 192
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 191 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 191 directly to driver
+14/05/10 01:28:59 INFO BlockManager: Found block rdd_41_29 locally
+14/05/10 01:28:59 INFO Executor: Finished task ID 191
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 193
+14/05/10 01:28:59 INFO Executor: Running task ID 193
+14/05/10 01:28:59 INFO BlockManager: Found block rdd_41_31 locally
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 192 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 192 directly to driver
+14/05/10 01:28:59 INFO Executor: Finished task ID 192
+14/05/10 01:28:59 INFO Executor: Serialized size of result for 193 is 765
+14/05/10 01:28:59 INFO Executor: Sending result for 193 directly to driver
+14/05/10 01:28:59 INFO Executor: Finished task ID 193
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 194
+14/05/10 01:28:59 INFO Executor: Running task ID 194
+14/05/10 01:28:59 INFO CoarseGrainedExecutorBackend: Got assigned task 196
+14/05/10 01:28:59 INFO Executor: Running task ID 196
+14/05/10 01:28:59 INFO MapOutputTracker: Updating epoch to 14 and clearing cache
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_2 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 196 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 196 directly to driver
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_0 locally
+14/05/10 01:29:00 INFO Executor: Finished task ID 196
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 200
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 194 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 194 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 194
+14/05/10 01:29:00 INFO Executor: Running task ID 200
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_6 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 200 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 200 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 200
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 203
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 204
+14/05/10 01:29:00 INFO Executor: Running task ID 204
+14/05/10 01:29:00 INFO Executor: Running task ID 203
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_10 locally
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_7 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 204 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 204 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 204
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 203 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 203 directly to driver
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 209
+14/05/10 01:29:00 INFO Executor: Running task ID 209
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 210
+14/05/10 01:29:00 INFO Executor: Running task ID 210
+14/05/10 01:29:00 INFO Executor: Finished task ID 203
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_12 locally
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_11 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 210 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 210 directly to driver
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 209 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 209 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 209
+14/05/10 01:29:00 INFO Executor: Finished task ID 210
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 214
+14/05/10 01:29:00 INFO Executor: Running task ID 214
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 215
+14/05/10 01:29:00 INFO Executor: Running task ID 215
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_14 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 214 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 214 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 214
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_16 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 215 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 215 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 215
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 218
+14/05/10 01:29:00 INFO Executor: Running task ID 218
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_17 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 218 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 218 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 218
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 219
+14/05/10 01:29:00 INFO Executor: Running task ID 219
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_19 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 219 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 219 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 219
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 222
+14/05/10 01:29:00 INFO Executor: Running task ID 222
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 223
+14/05/10 01:29:00 INFO Executor: Running task ID 223
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_23 locally
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_22 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 222 is 797
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 223 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 223 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 223
+14/05/10 01:29:00 INFO Executor: Sending result for 222 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 222
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 224
+14/05/10 01:29:00 INFO Executor: Running task ID 224
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 225
+14/05/10 01:29:00 INFO Executor: Running task ID 225
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_24 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 224 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 224 directly to driver
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_27 locally
+14/05/10 01:29:00 INFO Executor: Finished task ID 224
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 226
+14/05/10 01:29:00 INFO Executor: Running task ID 226
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 225 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 225 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 225
+14/05/10 01:29:00 INFO CoarseGrainedExecutorBackend: Got assigned task 227
+14/05/10 01:29:00 INFO Executor: Running task ID 227
+14/05/10 01:29:00 INFO BlockManager: Found block rdd_41_29 locally
+14/05/10 01:29:00 INFO Executor: Serialized size of result for 226 is 797
+14/05/10 01:29:00 INFO Executor: Sending result for 226 directly to driver
+14/05/10 01:29:00 INFO Executor: Finished task ID 226
+14/05/10 01:29:01 INFO CoarseGrainedExecutorBackend: Got assigned task 228
+14/05/10 01:29:01 INFO Executor: Running task ID 228
+14/05/10 01:29:01 INFO BlockManager: Found block rdd_41_31 locally
+14/05/10 01:29:01 INFO MapOutputTracker: Don't have map outputs for shuffle 12, fetching them
+14/05/10 01:29:01 INFO Executor: Serialized size of result for 227 is 797
+14/05/10 01:29:01 INFO Executor: Sending result for 227 directly to driver
+14/05/10 01:29:01 INFO Executor: Finished task ID 227
+14/05/10 01:29:01 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:29:01 INFO CoarseGrainedExecutorBackend: Got assigned task 229
+14/05/10 01:29:01 INFO Executor: Running task ID 229
+14/05/10 01:29:01 INFO MapOutputTracker: Got the output locations
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  17 ms
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:01 INFO MapOutputTracker: Don't have map outputs for shuffle 13, fetching them
+14/05/10 01:29:01 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  57 ms
+14/05/10 01:29:01 INFO MapOutputTracker: Don't have map outputs for shuffle 13, fetching them
+14/05/10 01:29:01 INFO MapOutputTracker: Got the output locations
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  4 ms
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:01 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  9 ms
+14/05/10 01:29:02 INFO Executor: Serialized size of result for 229 is 1012
+14/05/10 01:29:02 INFO Executor: Sending result for 229 directly to driver
+14/05/10 01:29:02 INFO Executor: Finished task ID 229
+14/05/10 01:29:02 INFO Executor: Serialized size of result for 228 is 1012
+14/05/10 01:29:02 INFO Executor: Sending result for 228 directly to driver
+14/05/10 01:29:02 INFO Executor: Finished task ID 228
+14/05/10 01:29:02 INFO CoarseGrainedExecutorBackend: Got assigned task 233
+14/05/10 01:29:02 INFO Executor: Running task ID 233
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  9 ms
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  32 ms
+14/05/10 01:29:02 INFO CoarseGrainedExecutorBackend: Got assigned task 234
+14/05/10 01:29:02 INFO Executor: Running task ID 234
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 26 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  32 ms
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:02 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  2 ms
+14/05/10 01:29:03 INFO Executor: Serialized size of result for 233 is 1012
+14/05/10 01:29:03 INFO Executor: Sending result for 233 directly to driver
+14/05/10 01:29:03 INFO Executor: Finished task ID 233
+14/05/10 01:29:03 INFO CoarseGrainedExecutorBackend: Got assigned task 237
+14/05/10 01:29:03 INFO Executor: Running task ID 237
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  53 ms
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  25 ms
+14/05/10 01:29:03 INFO Executor: Serialized size of result for 234 is 1012
+14/05/10 01:29:03 INFO Executor: Sending result for 234 directly to driver
+14/05/10 01:29:03 INFO Executor: Finished task ID 234
+14/05/10 01:29:03 INFO CoarseGrainedExecutorBackend: Got assigned task 239
+14/05/10 01:29:03 INFO Executor: Running task ID 239
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 25 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  32 ms
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  12 ms
+14/05/10 01:29:03 INFO Executor: Serialized size of result for 237 is 1012
+14/05/10 01:29:03 INFO Executor: Sending result for 237 directly to driver
+14/05/10 01:29:03 INFO Executor: Finished task ID 237
+14/05/10 01:29:03 INFO CoarseGrainedExecutorBackend: Got assigned task 240
+14/05/10 01:29:03 INFO Executor: Running task ID 240
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 31 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  7 ms
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  4 ms
+14/05/10 01:29:04 INFO Executor: Serialized size of result for 239 is 1012
+14/05/10 01:29:04 INFO Executor: Sending result for 239 directly to driver
+14/05/10 01:29:04 INFO Executor: Finished task ID 239
+14/05/10 01:29:04 INFO Executor: Serialized size of result for 240 is 1012
+14/05/10 01:29:04 INFO Executor: Sending result for 240 directly to driver
+14/05/10 01:29:04 INFO Executor: Finished task ID 240
+14/05/10 01:29:04 INFO CoarseGrainedExecutorBackend: Got assigned task 242
+14/05/10 01:29:04 INFO Executor: Running task ID 242
+14/05/10 01:29:04 INFO CoarseGrainedExecutorBackend: Got assigned task 243
+14/05/10 01:29:04 INFO Executor: Running task ID 243
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  29 ms
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  1 ms
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 31 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  7 ms
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  6 ms
+14/05/10 01:29:05 INFO Executor: Serialized size of result for 243 is 1012
+14/05/10 01:29:05 INFO Executor: Sending result for 243 directly to driver
+14/05/10 01:29:05 INFO Executor: Finished task ID 243
+14/05/10 01:29:05 INFO CoarseGrainedExecutorBackend: Got assigned task 245
+14/05/10 01:29:05 INFO Executor: Running task ID 245
+14/05/10 01:29:05 INFO Executor: Serialized size of result for 242 is 1012
+14/05/10 01:29:05 INFO Executor: Sending result for 242 directly to driver
+14/05/10 01:29:05 INFO Executor: Finished task ID 242
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  7 ms
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  3 ms
+14/05/10 01:29:05 INFO CoarseGrainedExecutorBackend: Got assigned task 246
+14/05/10 01:29:05 INFO Executor: Running task ID 246
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 31 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  7 ms
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  1 ms
+14/05/10 01:29:05 INFO Executor: Serialized size of result for 246 is 1012
+14/05/10 01:29:05 INFO Executor: Sending result for 246 directly to driver
+14/05/10 01:29:05 INFO Executor: Finished task ID 246
+14/05/10 01:29:05 INFO CoarseGrainedExecutorBackend: Got assigned task 249
+14/05/10 01:29:05 INFO Executor: Running task ID 249
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  17 ms
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  3 ms
+14/05/10 01:29:06 INFO Executor: Serialized size of result for 245 is 1012
+14/05/10 01:29:06 INFO Executor: Sending result for 245 directly to driver
+14/05/10 01:29:06 INFO Executor: Finished task ID 245
+14/05/10 01:29:06 INFO CoarseGrainedExecutorBackend: Got assigned task 251
+14/05/10 01:29:06 INFO Executor: Running task ID 251
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  89 ms
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  22 ms
+14/05/10 01:29:06 INFO Executor: Serialized size of result for 249 is 1012
+14/05/10 01:29:06 INFO Executor: Sending result for 249 directly to driver
+14/05/10 01:29:06 INFO Executor: Finished task ID 249
+14/05/10 01:29:06 INFO CoarseGrainedExecutorBackend: Got assigned task 254
+14/05/10 01:29:06 INFO Executor: Running task ID 254
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  10 ms
+14/05/10 01:29:06 INFO Executor: Serialized size of result for 251 is 1012
+14/05/10 01:29:06 INFO Executor: Sending result for 251 directly to driver
+14/05/10 01:29:06 INFO Executor: Finished task ID 251
+14/05/10 01:29:06 INFO CoarseGrainedExecutorBackend: Got assigned task 255
+14/05/10 01:29:06 INFO Executor: Running task ID 255
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:06 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  4 ms
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  2 ms
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  1 ms
+14/05/10 01:29:07 INFO Executor: Serialized size of result for 255 is 1012
+14/05/10 01:29:07 INFO Executor: Sending result for 255 directly to driver
+14/05/10 01:29:07 INFO CoarseGrainedExecutorBackend: Got assigned task 257
+14/05/10 01:29:07 INFO Executor: Running task ID 257
+14/05/10 01:29:07 INFO Executor: Finished task ID 255
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 32 non-zero-bytes blocks out of 32 blocks
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  5 ms
+14/05/10 01:29:07 INFO Executor: Serialized size of result for 254 is 1012
+14/05/10 01:29:07 INFO Executor: Sending result for 254 directly to driver
+14/05/10 01:29:07 INFO Executor: Finished task ID 254
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 2 non-zero-bytes blocks out of 2 blocks
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  3 ms
+14/05/10 01:29:07 INFO Executor: Serialized size of result for 257 is 1012
+14/05/10 01:29:07 INFO Executor: Sending result for 257 directly to driver
+14/05/10 01:29:07 INFO Executor: Finished task ID 257
+14/05/10 01:29:07 INFO CoarseGrainedExecutorBackend: Got assigned task 258
+14/05/10 01:29:07 INFO CoarseGrainedExecutorBackend: Got assigned task 260
+14/05/10 01:29:07 INFO Executor: Running task ID 260
+14/05/10 01:29:07 INFO Executor: Running task ID 258
+14/05/10 01:29:07 INFO MapOutputTracker: Updating epoch to 15 and clearing cache
+14/05/10 01:29:07 INFO CacheManager: Partition rdd_51_2 not found, computing it
+14/05/10 01:29:07 INFO MapOutputTracker: Don't have map outputs for shuffle 14, fetching them
+14/05/10 01:29:07 INFO MapOutputTracker: Doing the fetch; tracker actor = Actor[akka.tcp://spark@tester1:59599/user/MapOutputTracker#1105613162]
+14/05/10 01:29:07 INFO MapOutputTracker: Got the output locations
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 29 non-zero-bytes blocks out of 64 blocks
+14/05/10 01:29:07 INFO CacheManager: Partition rdd_51_0 not found, computing it
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 29 non-zero-bytes blocks out of 64 blocks
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  19 ms
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  13 ms
+14/05/10 01:29:07 INFO MemoryStore: ensureFreeSpace(2896) called with curMem=150222, maxMem=308713881
+14/05/10 01:29:07 INFO MemoryStore: Block rdd_51_2 stored as values to memory (estimated size 2.8 KB, free 294.3 MB)
+14/05/10 01:29:07 INFO BlockManagerMaster: Updated info of block rdd_51_2
+14/05/10 01:29:07 INFO Executor: Serialized size of result for 260 is 853
+14/05/10 01:29:07 INFO Executor: Sending result for 260 directly to driver
+14/05/10 01:29:07 INFO Executor: Finished task ID 260
+14/05/10 01:29:07 INFO CoarseGrainedExecutorBackend: Got assigned task 263
+14/05/10 01:29:07 INFO Executor: Running task ID 263
+14/05/10 01:29:07 INFO MemoryStore: ensureFreeSpace(2736) called with curMem=153118, maxMem=308713881
+14/05/10 01:29:07 INFO CacheManager: Partition rdd_51_5 not found, computing it
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 29 non-zero-bytes blocks out of 64 blocks
+14/05/10 01:29:07 INFO MemoryStore: Block rdd_51_0 stored as values to memory (estimated size 2.7 KB, free 294.3 MB)
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  1 ms
+14/05/10 01:29:07 INFO BlockManagerMaster: Updated info of block rdd_51_0
+14/05/10 01:29:07 INFO Executor: Serialized size of result for 258 is 853
+14/05/10 01:29:07 INFO Executor: Sending result for 258 directly to driver
+14/05/10 01:29:07 INFO Executor: Finished task ID 258
+14/05/10 01:29:07 INFO CoarseGrainedExecutorBackend: Got assigned task 264
+14/05/10 01:29:07 INFO Executor: Running task ID 264
+14/05/10 01:29:07 INFO CacheManager: Partition rdd_51_6 not found, computing it
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 29 non-zero-bytes blocks out of 64 blocks
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  12 ms
+14/05/10 01:29:07 INFO MemoryStore: ensureFreeSpace(3408) called with curMem=155854, maxMem=308713881
+14/05/10 01:29:07 INFO MemoryStore: Block rdd_51_5 stored as values to memory (estimated size 3.3 KB, free 294.3 MB)
+14/05/10 01:29:07 INFO BlockManagerMaster: Updated info of block rdd_51_5
+14/05/10 01:29:07 INFO Executor: Serialized size of result for 263 is 853
+14/05/10 01:29:07 INFO Executor: Sending result for 263 directly to driver
+14/05/10 01:29:07 INFO Executor: Finished task ID 263
+14/05/10 01:29:07 INFO CoarseGrainedExecutorBackend: Got assigned task 266
+14/05/10 01:29:07 INFO Executor: Running task ID 266
+14/05/10 01:29:07 INFO CacheManager: Partition rdd_51_8 not found, computing it
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 33 non-zero-bytes blocks out of 64 blocks
+14/05/10 01:29:07 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  10 ms
+14/05/10 01:29:08 INFO MemoryStore: ensureFreeSpace(2768) called with curMem=159262, maxMem=308713881
+14/05/10 01:29:08 INFO MemoryStore: Block rdd_51_6 stored as values to memory (estimated size 2.7 KB, free 294.3 MB)
+14/05/10 01:29:08 INFO BlockManagerMaster: Updated info of block rdd_51_6
+14/05/10 01:29:08 INFO Executor: Serialized size of result for 264 is 853
+14/05/10 01:29:08 INFO Executor: Sending result for 264 directly to driver
+14/05/10 01:29:08 INFO Executor: Finished task ID 264
+14/05/10 01:29:08 INFO CoarseGrainedExecutorBackend: Got assigned task 267
+14/05/10 01:29:08 INFO Executor: Running task ID 267
+14/05/10 01:29:08 INFO CacheManager: Partition rdd_51_9 not found, computing it
+14/05/10 01:29:08 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:08 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 30 non-zero-bytes blocks out of 64 blocks
+14/05/10 01:29:08 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  11 ms
+14/05/10 01:29:08 INFO MemoryStore: ensureFreeSpace(3184) called with curMem=162030, maxMem=308713881
+14/05/10 01:29:08 INFO MemoryStore: Block rdd_51_8 stored as values to memory (estimated size 3.1 KB, free 294.3 MB)
+14/05/10 01:29:08 INFO BlockManagerMaster: Updated info of block rdd_51_8
+14/05/10 01:29:08 INFO Executor: Serialized size of result for 266 is 853
+14/05/10 01:29:08 INFO Executor: Sending result for 266 directly to driver
+14/05/10 01:29:08 INFO Executor: Finished task ID 266
+14/05/10 01:29:08 INFO CoarseGrainedExecutorBackend: Got assigned task 270
+14/05/10 01:29:08 INFO Executor: Running task ID 270
+14/05/10 01:29:08 INFO MemoryStore: ensureFreeSpace(3024) called with curMem=165214, maxMem=308713881
+14/05/10 01:29:08 INFO MemoryStore: Block rdd_51_9 stored as values to memory (estimated size 3.0 KB, free 294.3 MB)
+14/05/10 01:29:08 INFO BlockManagerMaster: Updated info of block rdd_51_9
+14/05/10 01:29:08 INFO Executor: Serialized size of result for 267 is 853
+14/05/10 01:29:08 INFO Executor: Sending result for 267 directly to driver
+14/05/10 01:29:08 INFO Executor: Finished task ID 267
+14/05/10 01:29:08 INFO CoarseGrainedExecutorBackend: Got assigned task 271
+14/05/10 01:29:08 INFO Executor: Running task ID 271
+14/05/10 01:29:08 INFO CacheManager: Partition rdd_51_12 not found, computing it
+14/05/10 01:29:08 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:08 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 31 non-zero-bytes blocks out of 64 blocks
+14/05/10 01:29:08 INFO CacheManager: Partition rdd_51_13 not found, computing it
+14/05/10 01:29:08 INFO BlockFetcherIterator$BasicBlockFetcherIterator: maxBytesInFlight: 50331648, minRequest: 10066329
+14/05/10 01:29:08 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 31 non-zero-bytes blocks out of 64 blocks
+14/05/10 01:29:08 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  4 ms
+14/05/10 01:29:08 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 1 remote gets in  9 ms
+14/05/10 01:29:08 INFO MemoryStore: ensureFreeSpace(2896) called with curMem=168238, maxMem=308713881
+14/05/10 01:29:08 INFO MemoryStore: Block rdd_51_12 stored as values to memory (estimated size 2.8 KB, free 294.2 MB)
